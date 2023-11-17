@@ -1,4 +1,3 @@
-
 /* Basic Reset */
 * {
     margin: 0;
@@ -36,92 +35,45 @@ body {
     text-decoration: underline;
 }
 
-/* Hero Styles */
-#hero {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
-#hero h1 {
-    margin-bottom: 0.5rem;
-}
-
-#hero p {
-    margin-bottom: 1rem;
-}
-
-#hero button {
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#hero button:hover {
-    background-color: #555;
-}
-
-
+/* Hero Section Styles */
 .hero-section {
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevenir que la imagen de fondo se desborde */
+    background: url('../assets/image1.png') no-repeat right center/cover;
+    padding: 100px 0; /* Adjust this value as needed */
+    color: white;
 }
 
 .hero-content {
     z-index: 2;
-    width: 100%; /* En dispositivos móviles el contenido usará todo el ancho */
+    width: 50%; /* Content takes up half the width on desktop */
     padding: 1em;
-    text-align: center;
+    text-align: left;
 }
 
-.hero-image {
-    background: url('../assets/image1.png') no-repeat center center/cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.hero-inner {
-    max-width: 50%; /* O el porcentaje que prefieras para el ancho del contenedor de texto */
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-    padding: 5% 10%; /* Usa porcentajes para el padding para mayor flexibilidad */
-    text-align: left; /* Alineación del texto */
-}
-
-.background-image-section {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
-                url('../assets/image1.png') no-repeat right center/cover;
-    padding: 100px 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    height: 500px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-/* Responsive adjustments */
+/* Responsiveness */
 @media (max-width: 768px) {
     .hero-section {
-        flex-direction: column; /* Cambiar la dirección de flex a columna en móviles */
+        background: none; /* Removes background image on mobile */
+        padding: 50px 20px; /* Adjust for mobile */
     }
 
     .hero-content {
-        /* El contenido se sitúa sobre la imagen en móviles */
+        width: 100%; /* Content takes full width on mobile */
+        text-align: center; /* Centers text on mobile */
+    }
+
+    .hero-section::after {
+        content: '';
+        background: url('../assets/image1.png') no-repeat center center/cover;
         position: absolute;
         top: 0;
         left: 0;
-    }
-
-    .hero-image {
-        background-position: center left; /* Alinear la imagen de fondo a la izquierda */
+        width: 100%;
+        height: 100%; /* Adjust the height of the background image on mobile */
+        z-index: 1;
     }
 }
+
+/* ... other styles ... */
