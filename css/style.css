@@ -95,14 +95,35 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* Estilos generales */
+.hero-inner h1 {
+    font-size: 2rem; /* Tamaño de fuente para pantallas grandes */
+    /* otros estilos... */
+}
+
+.hero-inner p {
+    font-size: 1rem; /* Tamaño de fuente para pantallas grandes */
+    /* otros estilos... */
+}
 
 /* Estilos responsivos para dispositivos más pequeños */
 @media (max-width: 768px) {
-    .hero-inner {
-        padding: 10% 5%; /* Aumenta el padding verticalmente y reduce el horizontal */
-        text-align: center; /* Centra el texto para una mejor visualización en dispositivos pequeños */
+    .hero-inner h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
     }
-    .hero-section {
-        background-position: right 20% center; /* Ajusta la posición de la imagen de fondo */
+
+    .hero-inner p {
+        font-size: 0.875rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    }
+}
+
+/* Puedes añadir más puntos de ruptura según sea necesario */
+@media (max-width: 480px) {
+    .hero-inner h1 {
+        font-size: 1.25rem; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .hero-inner p {
+        font-size: 0.75rem; /* Aún más pequeño para pantallas muy pequeñas */
     }
 }
