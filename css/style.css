@@ -1,0 +1,91 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Styles */
+#hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+#hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    margin-bottom: 1rem;
+}
+
+#hero button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#hero button:hover {
+    background-color: #555;
+}
+
+
+.hero-section {
+    background: url('../assets/image1.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    height: 500px; /* O el valor que prefieras para la altura de la sección */
+}
+
+.hero-inner {
+    max-width: 50%; /* O el porcentaje que prefieras para el ancho del contenedor de texto */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+}
+
+.background-image-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
+                url('../assets/image1.png') no-repeat right center/cover;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    height: 500px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}

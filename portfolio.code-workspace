@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "projects/audio_extract_openai_whisper"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
