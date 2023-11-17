@@ -1,3 +1,4 @@
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -70,12 +71,16 @@ body {
     align-items: center;
     color: white;
     height: 500px; /* O el valor que prefieras para la altura de la sección */
+    background-size: cover; /* Asegúrate de que la imagen de fondo cubra toda la sección */
+    background-position: center; /* Centra la imagen de fondo */
 }
 
 .hero-inner {
     max-width: 50%; /* O el porcentaje que prefieras para el ancho del contenedor de texto */
     padding: 20px;
     background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 5% 10%; /* Usa porcentajes para el padding para mayor flexibilidad */
+    text-align: left; /* Alineación del texto */
 }
 
 .background-image-section {
@@ -88,4 +93,16 @@ body {
     color: white;
     height: 500px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Estilos responsivos para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .hero-inner {
+        padding: 10% 5%; /* Aumenta el padding verticalmente y reduce el horizontal */
+        text-align: center; /* Centra el texto para una mejor visualización en dispositivos pequeños */
+    }
+    .hero-section {
+        background-position: right 20% center; /* Ajusta la posición de la imagen de fondo */
+    }
 }
